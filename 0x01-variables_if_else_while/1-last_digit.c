@@ -10,13 +10,14 @@
 int main(void)
 
 {
-	int n = 0;
-	int lastDigit = abs(n) % 10;
-
+	int n;
+	int lastDigit;
 	scanf("%d", &n);
 
+	lastDigit = abs(n) % 10;
+
 	srand(time(0));
-	n = rand() - RAND_MAX /2;
+	n = rand() - RAND_MAX / 2;
 
 	printf("Last digit of n is %d\n", lastDigit);
 	if (lastDigit > 5)
