@@ -6,7 +6,6 @@
  * Return: 0 (success)
  */
 int main(void)
-
 {	
 	char i;
 	
