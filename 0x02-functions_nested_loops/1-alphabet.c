@@ -1,7 +1,7 @@
 # include <stdio.h>
 
 /**
- * main - entry point
+ * print_alphabet - entry point of a function prototype
  *
  * return:0 (success)
  */
