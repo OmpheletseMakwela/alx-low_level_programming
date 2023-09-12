@@ -14,12 +14,7 @@ void print_alphabet(void)
 		putchar(i);
 	putchar('\n');
 }
-/**
- * main - Entry poit
- *
- * Return: 0 (success)
- */
-int man(void)
+int main(void)
 {
 	print_alphabet();
 	return (0);
