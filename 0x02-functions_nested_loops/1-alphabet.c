@@ -13,6 +13,11 @@ void print_alphabet(void)
 		putchar(i);
 	putchar('\n');
 }
+/**
+ * main_alphabet- entry point for the print_alphabet
+ *
+ * Return: Always 0
+ */
 int main_alphabet(void)
 {
 	print_alphabet();

@@ -5,7 +5,7 @@
  *
  * Return: Always 0.
  */
-int main_alphabet(void)
+int main(void)
 {
     print_alphabet();
     return (0);
