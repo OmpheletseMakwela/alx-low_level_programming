@@ -1,5 +1,4 @@
-# include <stdio.h>
-# include <ctype.h>
+# include "main.h"
 
 /**
  * _islower - Entry point of a function prototype
@@ -8,13 +7,10 @@
  */
 int _islower(int c)
 {
-	if (islower(c) != 0 )
+	if (c >= 97 && c <= 122)
 	{
-		return 1;
+		return (1);
 	}
-	else
-	{
-		return 0;
-	}
+	return (0);
 }
 
