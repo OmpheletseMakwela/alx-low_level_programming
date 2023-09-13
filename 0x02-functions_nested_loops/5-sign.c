@@ -4,9 +4,10 @@
 /**
  * print_sign - prototype function
  * print_sign - prototype function that checks for the sign of the character
- * @param n the number to check
+ * n the number to check
  *
- * @return 1 if is greater than zero,0 if n is zero and -1 if n is less than 0
+ * return 1 if is greater than zero,0 if n is zero and -1 if n is less than 0
+ * _putchar - the function used to output an input
  */
 int print_sign(int n)
 {
