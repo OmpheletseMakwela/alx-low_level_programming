@@ -5,7 +5,7 @@
  * print_sign - prototype function that checks for the sign of the character
  * @n: The number to check
  *
- * return: 1 if is greater than zer0, 0 if n is zero and -1 if n is less than 0 
+ * return: 1 if is greater than zero,0 if n is zero and -1 if n is less than 0 
  */
 int print_sign(int n)
 {
