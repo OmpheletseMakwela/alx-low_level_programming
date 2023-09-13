@@ -1,28 +1,24 @@
+# include <stdio.h>
+# include <ctype.h>
 #include "main.h"
-#include <stdio.h>
-#include <ctype.h>
 
 /**
- * test_isalpha - Test the _isalpha function
- *
- * @n: Number to pass to _isalpha function
- */
-void test_isalpha(int n)
-{
-	int r;
-
-	r = isalpha(n);
-	putchar(r + '0');
-	putchar('\n');
-}
-
-/**
- * main - check the code for Holberton School students.
+ * main - check the code.
  *
  * Return: Always 0.
  */
 int main(void)
 {
-	test_isalpha('H');
-	return (0);
+    int r;
+
+    r = isalpha('H');
+    putchar(r + '0');
+    r = isalpha('o');
+    putchar(r + '0');
+    r = isalpha(108);
+    putchar(r + '0');
+    r = isalpha(';');
+    putchar(r + '0');
+    putchar('\n');
+    return (0);
 }

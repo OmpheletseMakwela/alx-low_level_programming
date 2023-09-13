@@ -1,14 +1,13 @@
 # include <stdio.h>
-# include <ctype.h>
 
-/**
+/*
  * _isalpha - Entry point of a function prototype
  *
- * return: 0 always success
+ * return : 0 success always
  */
 int _isalpha(int c)
 {
-	if (isalpha(c) != 0)
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 	{
 		return 1;
 	}
