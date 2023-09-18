@@ -4,7 +4,7 @@
 /**
  * _strlen - A prototype function that calculates the length of the string
  * @s: a pointer that contains a string
- * return 0 always a success
+ * Return: the length of the string
  */
 int _strlen(char *s)
 {
