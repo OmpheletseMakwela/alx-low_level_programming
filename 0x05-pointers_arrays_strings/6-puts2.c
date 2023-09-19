@@ -3,7 +3,6 @@
 /**
  * puts2 - prints every character on even position
  * @str: Is a pointer that is assigned
- * @position: ia an integer position
  */
 void puts2(char *str)
 {
@@ -14,6 +13,7 @@ void puts2(char *str)
 		if (position % 2 == 0)
 		{
 			_putchar(str[position]);
+			_putchar('\n');
 		}
 		position++;
 	}
