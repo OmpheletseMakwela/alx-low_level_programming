@@ -6,6 +6,7 @@
  * _strcpy - A pinter prototype function
  * @dest: A pointer that is assigned
  * @src: A pointer that is assigned
+ * Return: dest_start
  */
 char *_strcpy(char *dest, char *src)
 {
