@@ -4,6 +4,7 @@
 /**
  * print_array - A prototype function
  * @a: a pointer that is assigned
+ * @n: an integer that is assigned
  */
 void print_array(int *a, int n)
 {
@@ -21,4 +22,5 @@ void print_array(int *a, int n)
 			printf(", ");
 		}
 	}
+	pritnf("\n");
 }
