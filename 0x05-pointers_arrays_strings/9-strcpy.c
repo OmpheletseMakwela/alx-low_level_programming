@@ -2,7 +2,7 @@
 # include <stdio.h>
 
 /**
- * _strcpy - A prototype function that copies a string
+ * @_strcpy - A prototype function that copies a string
  * @dest: A pointer that is assigned
  * @src: A pointer that is assigned
  */
