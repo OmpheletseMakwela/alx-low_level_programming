@@ -3,6 +3,7 @@
 
 /**
  * rev_string - A prototype function that writes a string in reverse
+ * @s: A pointer that is assigned
  */
 void rev_string(char *s)
 {
