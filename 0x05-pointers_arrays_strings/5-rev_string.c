@@ -2,6 +2,7 @@
 # include <string.h>
 
 /**
+ * rev_string - A prototype function that writes a string in reverse
  */
 void rev_string(char *s)
 {
