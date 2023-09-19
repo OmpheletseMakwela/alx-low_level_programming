@@ -13,8 +13,8 @@ void puts2(char *str)
 		if (position % 2 == 0)
 		{
 			_putchar(str[position]);
-			_putchar('\n');
 		}
 		position++;
+		_putchar('\n');
 	}
 }
