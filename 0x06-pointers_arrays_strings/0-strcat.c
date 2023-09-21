@@ -2,10 +2,10 @@
 # include <string.h>
 
 /**
- * _strcat - Prototype function
+ * _strcat - A prototype function that concatenate strings
  * @dest: pointer assigned
  * @src: pointer assigned
- * return dest
+ * Return: destination string
  */
 char *_strcat(char *dest, char *src)
 {
