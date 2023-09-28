@@ -2,6 +2,7 @@
 
 /**
  * factorial - Calculates a factorial of a number
+ * @n: A number that a factorial is calculated for
  * Return: 1 if equal to 0; -1 if less than 0 and rest if else
  */
 int factorial(int n)
