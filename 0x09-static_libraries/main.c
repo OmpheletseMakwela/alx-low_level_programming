@@ -1,8 +1,12 @@
 #include "main.h"
 #include <stdio.h>
 
+/**
+ * main - main function
+ * Return: 0
+ */
 int main(void)
 {
-    puts("\"At the end of the day, my goal was to be the best hacker\"\n\t- Kevin Mitnick");
-    return (0);
+	puts("\"At the end of the day, my goal was to be the best hacker\"\n\t- Kevin Mitnick");
+	return (0);
 }
