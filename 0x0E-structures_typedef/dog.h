@@ -1,17 +1,13 @@
-#ifndef DOG_H
-#define DOG_H
+#ifndef MAIN_H
+#define MAIN_H
 
-/**
- * struct dog - group together variable of different data types
- * @name: name
- * @age:age
- * @owner:owner
- */
-struct dog
-{
-	char *name;
-	float age;
-	char *owner;
+struct dog {
+    char *name;
+    float age;
+    char *owner;
 };
+void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
 
-#endif /* DOG_H */
+
+#endif /* MAIN_H */
