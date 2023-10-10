@@ -1,7 +1,14 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-struct dog {
+/**
+ * struct dog - structure for different variables grouped together
+ * @name: dog member 1
+ * @age: dog member 2
+ * @owner: dog member 3
+ */
+struct dog
+{
 	char *name;
 	float age;
 	char *owner;
