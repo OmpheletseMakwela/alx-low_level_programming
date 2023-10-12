@@ -5,7 +5,7 @@
  * @array: of elements to be compared
  * @size: of elements
  * @cmp: function pointer
- * Return: -1 if failure and i 
+ * Return: -1 if failure and i
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
