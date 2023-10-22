@@ -11,27 +11,26 @@
  */
 size_t print_list(const list_t *h)
 {
-	size_t count = 0;
-	char elements_str[20];
-	char count_str[12];
+	size_t node_count = 0;
+	int len;
+	char len_str[20];
 
 	while (h != NULL)
 	{
-		count++;
 		if (h->str == NULL)
 		{
-			write(1, "[0] (nil)\n", 11);
+			write(1, "[0] (nil)\n", 10);
 		}
 		else
 		{
-			snprintf(count_str, sizeof(count_str), "[%u] ", h->len);
-			write(1, count_str, strlen(count_str));
+			len = snprintf(len_str, sizeof(len_str), "[%d]", h->len);
+			write(1, len_str, len);
+			write(1, " ", 1);
 			write(1, h->str, h->len);
 			write(1, "\n", 1);
 		}
 		h = h->next;
-		snprintf(elements_str, sizeof(elements_str), "-> %lu elements\n", count);
-		write(1, elements_str, strlen(elements_str));
+		node_count++;
 	}
-	return (count);
+	return (node_count);
 }
