@@ -21,9 +21,9 @@ int _sqrt_recursion(int n)
 		int guess = n / 2;
 		int new_guess = (guess + n / guess) / 2;
 
-		if (new_guess == guess)
-			return (guess);
-		else
+		if (new_guess >= guess)
 			return (_sqrt_recursion(new_guess));
+		else
+			return (new_guess);
 	}
 }
