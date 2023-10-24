@@ -5,7 +5,6 @@
 
 /**
  * is_substring_palindrome - A function
- * is_palindrome - A function
  * @s: variable
  * @start: variable
  * @end: variable
@@ -14,7 +13,9 @@
 
 int is_substring_palindrome(char *s, int start, int end);
 /**
- * is_palindome - A function
+ * is_palindrome - A function
+ * @s: variable
+ * Return: length
  */
 int is_palindrome(char *s)
 {
@@ -22,7 +23,14 @@ int is_palindrome(char *s)
 
 	return (is_substring_palindrome(s, 0, length - 1));
 }
-
+/**
+ * is_substring_palindrome - A function
+ * is_palindrome - A function
+ * @s: variable
+ * @start: variable
+ * @end: variable
+ * Return: 1 always a success
+ */
 int is_substring_palindrome(char *s, int start, int end)
 {
 	if (start >= end)
