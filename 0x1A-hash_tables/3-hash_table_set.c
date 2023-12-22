@@ -1,17 +1,19 @@
+#include <stdlib.h>
+#include <string.h>
 #include "hash_tables.h"
-#include <stdio.h>
 
 /**
  * hash_table_set - Adds an element to the hash table.
- * @ht: The hash table to add/update the key/value to.
- * @key: The key. Cannot be an empty string.
- * @value: The value associated with the key. Must be duplicated.
+ * @ht: The hash table to add/update the key/value to
+ * @key: The key. (Cannot be an empty string)
+ * @value: The value associated with the key. (Can be an empty string)
  *
- * Return: 1 if succeeded, 0 otherwise.
+ * Return: 1 if it succeeded, 0 otherwise
+ * In case of collision, add the new node at the beginning of the list
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-    hash_node_t *new_node, *temp_node;
+    hash_node_t *new_node, *current_node;
     unsigned long int index;
 
     if (ht == NULL || key == NULL || *key == '\0')
@@ -19,19 +21,19 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
     index = key_index((const unsigned char *)key, ht->size);
 
-    temp_node = ht->array[index];
+    current_node = ht->array[index];
 
-    while (temp_node != NULL)
+    while (current_node != NULL)
     {
-        if (strcmp(temp_node->key, key) == 0)
+        if (strcmp(current_node->key, key) == 0)
         {
-            free(temp_node->value);
-            temp_node->value = strdup(value);
-            if (temp_node->value == NULL)
+            free(current_node->value);
+            current_node->value = strdup(value);
+            if (current_node->value == NULL)
                 return 0;
             return 1;
         }
-        temp_node = temp_node->next;
+        current_node = current_node->next;
     }
 
     new_node = malloc(sizeof(hash_node_t));
