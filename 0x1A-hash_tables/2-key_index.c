@@ -2,21 +2,10 @@
 #include <stdlib.h>
 #include "hash_tables.h"
 
-/**
- * hash_djb2 - Hashes a string using the djb2 algorithm.
- * @str: The string to be hashed.
- *
- * Return: The hash value generated from the input string.
- */
-unsigned long int hash_djb2(const unsigned char *str)
+unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
-	unsigned long int hash;
-	int c;
+	unsigned long int hash_value = hash_djb2(key);
+	unsigned long int index = hash_value % size;
 
-	hash = 5381;
-	while ((c = *str++))
-	{
-		hash = ((hash << 5) + hash) + c;
-	}
-	return (hash);
+	return (index);
 }
