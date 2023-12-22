@@ -5,20 +5,25 @@
  * hash_table_delete - Deletes a hash table
  * @ht: The hash table
  */
-char *hash_table_get(const hash_table_t *ht, const char *key)
+void hash_table_delete(hash_table_t *ht)
 {
-	hash_node_t *current_node;
-	unsigned long int index;
+	hash_node_t *node, *temp;
+	unsigned long int i;
 
-	if (ht == NULL || key == NULL || *key == '\0')
-		return (NULL);
-	index = key_index((const unsigned char *)key, ht->size);
-	current_node = ht->array[index];
-	while (current_node != NULL)
+	if (ht == NULL)
+		return;
+	for (i = 0; i < ht->size; i++)
 	{
-		if (strcmp(current_node->key, key) == 0)
-			return (current_node->value);
-		current_node = current_node->next;
+		node = ht->array[i];
+		while (node != NULL)
+		{
+			temp = node->next;
+			free(node->key);
+			free(node->value);
+			free(node);
+			node = temp;
+		}
 	}
-	return (NULL);
+	free(ht->array);
+	free(ht);
 }
